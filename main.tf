@@ -13,19 +13,16 @@ terraform {
 
   backend "remote" {
     organization = "ACG-Terraform-Demos-Fiba"
-
+   
     workspaces {
       name = "demo-github-actions"
     }
   }
 }
 
-
 provider "aws" {
   region = "us-east-1"
 }
-
-
 
 resource "random_pet" "sg" {}
 
